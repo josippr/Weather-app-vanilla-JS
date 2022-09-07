@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vremenska 2.0</title>
+
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="icon" href="IMG/vremenska_icon_transparent.png">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat&family=Open+Sans&family=Poppins&family=Raleway&family=Roboto&family=Rubik&display=swap" rel="stylesheet">
+</head>
+
+<body onload=processWeatherData()>
+    <h1 id="switch" style="margin-top: 150px; color: #FFF; text-align: center;">switch to mobile view :)</h1>
+    <header>
+        Vremenska 2.0
+    </header>
+
+    <main>
+        <div class="main-cont">
+            <h1 style="font-weight: 200; text-decoration: underline; margin-bottom: 10px;">Current weather for Zagreb, Murter & Glina:</h1>
+            <!-- <p style="margin-top: 5px;">Tip: click on tile for detailed forecast ;)</p> -->
+            <div class="item-wrapper" data-aos="flip-left" style="float: left;">
+                <div class="weather">
+                    <div id="date" style="display: none;"></div>
+                    <div id="cityName">Zagreb, Grič</div>
+                    <img src="" id="icon">
+                    <div id="temp"></div>
+                    <div id="description"></div>
+                </div>
+            </div>
+            <div class="item-wrapper" data-aos="flip-left" style="float: right;">
+                <div class="weather">
+                    <div id="date" style="display: none;"></div>
+                    <div id="cityName-cn">Zagreb, Donji Grad</div>
+                    <img src="" id="icon-cn">
+                    <div id="temp-cn"></div>
+                    <div id="description-cn"></div>
+                </div>
+            </div>
+            <div class="item-wrapper" data-aos="flip-left" style="float: left;">
+                <div class="weather">
+                    <div id="date" style="display: none;"></div>
+                    <div id="cityName-zpr">Strmec-Zaprešić</div>
+                    <img src="" id="icon-zpr">
+                    <div id="temp-zpr"></div>
+                    <div id="description-zpr"></div>
+                </div>
+            </div>
+            <div class="item-wrapper" data-aos="flip-left" style="float: right;">
+                <div class="weather">
+                    <div id="date" style="display: none;"></div>
+                    <div id="cityName-vg">Buzin-VG, Zagreb</div>
+                    <img src="" id="icon-vg">
+                    <div id="temp-vg"></div>
+                    <div id="description-vg"></div>
+                </div>
+            </div>
+            <div class="item-wrapper" data-aos="flip-left" style="float: left;">
+                <div class="weather">
+                    <div id="date" style="display: none;"></div>
+                    <div id="cityName-mu">Murter, otok Murter</div>
+                    <img src="" id="icon-mu">
+                    <div id="temp-mu"></div>
+                    <div id="description-mu"></div>
+                </div>
+            </div>
+            <div class="item-wrapper" data-aos="flip-left" style="float: right;">
+                <div class="weather">
+                    <div id="date" style="display: none;"></div>
+                    <div id="cityName-gl">Glina, Banovina</div>
+                    <img src="" id="icon-gl">
+                    <div id="temp-gl"></div>
+                    <div id="description-gl"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h4>Made by &copy;JP</h4>
+    </footer>
+    <script type="text/javascript" src="JS/fetch_weather.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/ecbdcc5fc9.js" crossorigin="anonymous"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('JS/service-worker.js');
+        }
+    </script>
+</body>
+
+</html>

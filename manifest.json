@@ -1,0 +1,10 @@
+{
+    "name": "Vremenska 2.0",
+    "short_name": "Vremenska",
+    "start_url": "/?home=true",
+    "icons": [
+
+    ],
+    "display": "fullscreen",
+    "orientation": "portrait"
+}
